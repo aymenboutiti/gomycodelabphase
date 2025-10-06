@@ -22,7 +22,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
                 href="/"
@@ -47,6 +47,21 @@ export default function Navbar() {
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               >
                 À propos
+              </Link>
+            </div>
+            {/* Login & Sign Up Buttons */}
+            <div className="ml-6 flex space-x-3">
+              <Link
+                href="/login"
+                className="px-4 py-2 rounded-md text-sm font-medium bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors duration-200 border border-blue-200"
+              >
+                Login
+              </Link>
+              <Link
+                href="/signup"
+                className="px-4 py-2 rounded-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200"
+              >
+                Sign Up
               </Link>
             </div>
           </div>
@@ -126,6 +141,21 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(false)}
           >
             À propos
+          </Link>
+          {/* Login & Sign Up Buttons for mobile */}
+          <Link
+            href="/login"
+            className="block px-3 py-2 rounded-md text-base font-medium bg-blue-50 text-blue-600 hover:bg-blue-100 transition-colors duration-200 border border-blue-200 mt-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Login
+          </Link>
+          <Link
+            href="/signup"
+            className="block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200 mt-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Sign Up
           </Link>
         </div>
       </div>
